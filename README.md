@@ -41,3 +41,9 @@ I think that both attackers and defenders can benefit from these models. As well
 | Command and Control | Communicate with compromised systems to control them |
 | Exfiltration | Steal data |
 | Impact | Manipulate, interrupt, or destroy your systems and data |
+
+#### Install Debian on VM
+
+![VirtualBox_CS-course_01_04_2022_14_46_04](https://user-images.githubusercontent.com/102544139/161257628-eccc1604-df5a-498d-b110-7879f97bebd0.png)
+
+
