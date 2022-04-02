@@ -16,16 +16,10 @@
 6. Command and Control (C2) - establishing the connection between the attacked target and command control server.
 7. Actions on Objectives - at this stage actual goals can be achieved: stealing or destroying the data etc.
 
-#### Comparison of Cyber Kill Chain and ATT&CK Enterprise matrix
+#### Mitre Att&ck Framework
+Mitre Att&ck Framework is more detailed and describes different tecniques and sub-tenchinques. It's not strictly stuctured as Cyber Kill Chain. Also it containes different Matrixes for different entities, such as separate Enterprise Matrix that contains sub-categories such as Windows, macOS ets. Mitre Att&ck Framework has separate Matrix for Mobile and Matrix for Industrial Control Systems.
 
-First of all, the ATT&CK Enterprise matrix is more detailed, it contains more steps in the chain and also possible techniques and sub-techniques. But the Cyber Kill Chain and ATT&CK Enterprise matrix have the same backbone, the difference is just ATT&CK Enterprise matrix has several steps that can fit in one in the Cyber Kill Chain. 
-
-Another difference is that the Cyber Kill Chain has a defined order, "where adversaries are expected to move linearly from one phase to another. 
-The MITRE ATT&CK Framework is deliberately unordered to acknowledge that an adversary may move through Tactics out of order, skip some Tactics, and revisit some Tactics multiple times throughout the course of an attack." (Poston, H. 2020. How to Use the MITRE ATT&CK® Framework and the Lockheed Martin Cyber Kill Chain Together, https://resources.infosecinstitute.com/topic/how-to-use-the-mitre-attck-framework-and-the-lockheed-martin-cyber-kill-chain-together/)
-
-I think that both attackers and defenders can benefit from these models. As well as other stakeholders of the business. In my opinion MITRE ATT&CK Framework could be useful in learning what kind of attacks are possible and what are the risks of the business.
-
-##### Table 1. Mitre Att&ck Framework Summary. Source: What is Mitre Att&ck Framework? - Definition (cyberark.com)
+##### Table 1. Mitre Att&ck Framework Enterprise Matrix Summary. Source: What is Mitre Att&ck Framework? - Definition (cyberark.com)
 
 | Tactic       | The Adversary is Trying to: |
 |--------------|----------------------------------------------------------------|
@@ -43,6 +37,17 @@ I think that both attackers and defenders can benefit from these models. As well
 | Command and Control | Communicate with compromised systems to control them |
 | Exfiltration | Steal data |
 | Impact | Manipulate, interrupt, or destroy your systems and data |
+
+#### Comparison of Cyber Kill Chain and ATT&CK Enterprise matrix
+
+First of all, the ATT&CK Enterprise matrix is more detailed, it contains more steps in the chain and also possible techniques and sub-techniques. But the Cyber Kill Chain and ATT&CK Enterprise matrix have the same backbone, the difference is just ATT&CK Enterprise matrix has several steps that can fit in one in the Cyber Kill Chain. 
+
+Another difference is that the Cyber Kill Chain has a defined order, "where adversaries are expected to move linearly from one phase to another. 
+The MITRE ATT&CK Framework is deliberately unordered to acknowledge that an adversary may move through Tactics out of order, skip some Tactics, and revisit some Tactics multiple times throughout the course of an attack." (Poston, H. 2020. How to Use the MITRE ATT&CK® Framework and the Lockheed Martin Cyber Kill Chain Together, https://resources.infosecinstitute.com/topic/how-to-use-the-mitre-attck-framework-and-the-lockheed-martin-cyber-kill-chain-together/)
+
+I think that both attackers and defenders can benefit from these models. As well as other stakeholders of the business. In my opinion MITRE ATT&CK Framework could be useful in learning what kind of attacks are possible and what are the risks of the business.
+
+**What is missing from these models?** I couldn't find a step in the MITRE ATT&CK Matrix about stealing the data.
 
 #### Security incident description and analisys
 ##### Cloud Hopper, episode 103, Darknet Diaries.
@@ -79,7 +84,7 @@ The hack was associated with the Apt10 group. [Source](https://www.fbi.gov/wante
 
 To fix the breach MSP had to change all the passwords, which took lots of time and effort.
 
-#### Analisys
+#### Analysis
 
 **Reconnaissance**
 There is no information about the Reconnaissance phase, but threat actors definitely conducted Active Scanning and Gathering Victim Host Information to define that the target server was running Windows, it helped them to plant mimikatz, the software that targets Windows systems. 
