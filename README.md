@@ -132,4 +132,39 @@ Various data was stolen from customers of the attacked MSP. As well as data from
 
 ![VirtualBox_CS-course_01_04_2022_14_46_04](https://user-images.githubusercontent.com/102544139/161257628-eccc1604-df5a-498d-b110-7879f97bebd0.png)
 
+### H2
+#### Summary of Santos et al 2017: Security Penetration Testing - The Art of Hacking Series LiveLessons: Lesson 6: Hacking User Credentials
+
+##### Vulnerable passwords are:
+- Default passwords, passwords that products are shipped with, for example modem or switch passwords. **Default passwords must be changed**
+- Simple passwords. For example: cat, qwerty, 12345678, date of birth. **Longer and more randomized passwords with special characters must be used as well as two factor authentication if it's available**
+- Reused passwords. Using the same passwords across different accounts is not secure. **Using different passwords for different account** 
+- Admin password. After cracking the admin password, access to the whole system will be compromised. **Using secure admin password, change it regularly, use two factor authentication**
+
+##### Ways of stealing the password
+- Wifi spot in the hotel or cafe, we don't know how the network is set up, when we are visiting a hotel or a cafe and using their password. There are several types of attacks that could be conducted. For example traffic sniffing and man-in-the-middle attacks. ~ I was wondering about this, isn't it really difficult to do nowadays (I'm not talking about websites that still use http), because all the traffic should be encrypted and while sniffing traffic you just get bits and pieces of information? For example when using nmap. Is there really a way to make sense of that easily?~
+- SSL spoofing
+- SSH downgrade
+- Compromising switch or modem (for example using the default password)
+
+##### Why is it easy to crack passwords?
+- Using modern CPUs and GPUs made the process of cracking password hashes faster
+- We can use distribution between machines nowadays.
+- Dictionaries. There are many password dictionaries out there. They are collected from the most used passwords and password breaches.
+- Weak algorithms. For example Windows' nt hash and lm hash. Or not using the salt in passwords. (Using salt in passwords will prevent two users having the same password hashes if they have the same password)
+
+##### How to improve password security?
+Consumer:
+- Use two factor authentication
+- Use certificate based authentication
+- Use better longer passwords
+
+Company:
+- Use encryption
+- Use hashing
+- Use salt
+- Secure password storage
+- Support longer passwords with special characters
+
+
 
