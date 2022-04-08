@@ -166,5 +166,13 @@ Company:
 - Secure password storage
 - Support longer passwords with special characters
 
+#### Cracking hashes
+- 21232f297a57a5a743894a0e4a801fc3 = admin
+- f2477a144dff4f216ab81f2ac3e3207d = monkey
+- $2y$18$axMtQ4N8j/NQVItQJed9uORfsUK667RAWfycwFMtDBD6zAo1Se2eu. Hash is bcrypt $2*$, Blowfish (Unix). Hashcat mode: 3200. Estimated time for cracking with VM box id 7 years :)
+![screes](https://user-images.githubusercontent.com/102544139/162403093-42547e1a-f519-4686-84e4-0feb621058b4.png)
 
+
+#### Something to think about: we just learned that hashing is a one-way function. If this is true, why can you crack the hash and find out the original password?
+Because we are not cracking the hash itself, but using the hash algorithm to hash password from the pasword lists and then comparing these two hashes.
 
