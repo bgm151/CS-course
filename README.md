@@ -172,6 +172,8 @@ Company:
 - $2y$18$axMtQ4N8j/NQVItQJed9uORfsUK667RAWfycwFMtDBD6zAo1Se2eu. Hash is bcrypt $2*$, Blowfish (Unix). Hashcat mode: 3200. Estimated time for cracking with VM box id 7 years :)
 ![screes](https://user-images.githubusercontent.com/102544139/162403093-42547e1a-f519-4686-84e4-0feb621058b4.png)
 
+- I don't have any physical linux machine right now to test how hashcat uses GPU. Tried with my Raspberry Pi400, but didn't work, the error was _No devices found_, the command I tried to use was _hashcat -m 0 -d 2 'somehash' rockyou.txt -o solve_, where -d 2 is specifying device type GPU.
+- Tried to crack sha256 hash of simple password that I found in the dictionary "happy5", so Raspberry Pi400 cracked it straight away. Was having problems in the beginning, forgot to use -n when hashing. 
 
 #### Something to think about: we just learned that hashing is a one-way function. If this is true, why can you crack the hash and find out the original password?
 Because we are not cracking the hash itself, but using the hash algorithm to hash password from the pasword lists and then comparing these two hashes.
