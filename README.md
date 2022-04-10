@@ -142,7 +142,7 @@ Various data was stolen from customers of the attacked MSP. As well as data from
 - Admin password. After cracking the admin password, access to the whole system will be compromised. **Using secure admin password, change it regularly, use two factor authentication**
 
 ##### Ways of stealing the password
-- Wifi spot in the hotel or cafe, we don't know how the network is set up, when we are visiting a hotel or a cafe and using their password. There are several types of attacks that could be conducted. For example traffic sniffing and man-in-the-middle attacks. ~ I was wondering about this, isn't it really difficult to do nowadays (I'm not talking about websites that still use http), because all the traffic should be encrypted and while sniffing traffic you just get bits and pieces of information? For example when using nmap. Is there really a way to make sense of that easily?~
+- Wifi spot in the hotel or cafe, we don't know how the network is set up, when we are visiting a hotel or a cafe and using their password. There are several types of attacks that could be conducted. For example traffic sniffing and man-in-the-middle attacks. _I was wondering about this, isn't it really difficult to do nowadays (I'm not talking about websites that still use http), because all the traffic should be encrypted and while sniffing traffic you just get bits and pieces of information? For example when using nmap. Is there really a way to make sense of that easily?_
 - SSL spoofing
 - SSH downgrade
 - Compromising switch or modem (for example using the default password)
