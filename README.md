@@ -176,3 +176,32 @@ Company:
 #### Something to think about: we just learned that hashing is a one-way function. If this is true, why can you crack the hash and find out the original password?
 Because we are not cracking the hash itself, but using the hash algorithm to hash password from the pasword lists and then comparing these two hashes.
 
+#### Summary of Schneier 2015: Applied Cryptography: Chapter 2 - Protocol Building Blocks
+- Protocol is a predefined chain of steps, that should be accomplished by at least two parties.
+- There are three types of protocols: 
+  -  Arbitrated. When parties use some trusted third party that will verify the data.
+  -  Adjudicated. When parties use a trusted third party to solve the conflict in the case if one of the parties cheated.
+  -  Self-enforcing. Cheating of any party included in the communication is immediately detected.
+- Types of protocol attacks: 
+  - Active attack - requires active intervention. Corrupting data, gaining unauthorised access to resources. Follow the protocol, but try to obtain more information than protocol allows.
+  - Passive attack - collect information about communicating parties, capturing messages. Disrupt protocol.
+
+#### Public-key cryptography
+The protocol was designed by Whitfield Diffie and Martin Hellman in 1976 and it changed that paradigm of cryptography forever.
+
+##### Key exchange process
+
+![Public area](https://user-images.githubusercontent.com/102544139/162615554-778b9bdc-36a5-4005-a5f7-f90f2a34a883.png)
+
+- First user A and user B use public variables and combine their private key with the generator.  So user A will have A + G = AG and user B B + G = BG.
+- Exchange these variables AG and BG. So user A gets BG and user B gets AG.
+- User A takes BG and combines it with his private key. And user B combines AG with his private key. So user A now has BGA and user B AGB.
+- Now this key can be used for further communicaton.
+
+**Nothing from the public area can be combined to get the private key value. And the private key is never shared or never gets into the public area.**
+
+Source: Secret Key Exchange (Diffie-Hellman) - Computerphile https://www.youtube.com/watch?v=NmM9HA2MQGI 
+
+
+
+
