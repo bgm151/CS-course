@@ -204,6 +204,36 @@ The protocol was designed by Whitfield Diffie and Martin Hellman in 1976 and it 
 
 Source: Secret Key Exchange (Diffie-Hellman) - Computerphile https://www.youtube.com/watch?v=NmM9HA2MQGI 
 
+### H3
+
+#### Summary of Schneier 2015: Applied Cryptography Chapter 1: Foundations
+- Cryptography not only provides confidentiality but is also used as an authentication (when the receiver can prove the origin of the message). Integrity - when the receiver is sure that the data wasn't changed while transferring. And nonrepudiation - when the sender can’t deny that he sent a message.
+
+- There are two types of key-based algorithms. 
+  - Symmetric - where the decryption key can be calculated from the encryption key and vice versa. In most symmetric algorithms decryption and encryption keys are the same. Symmetric algorithms are divided into stream algorithms that operate on the plain text a single bit at a time, and block algorithms that operate on the plain text in groups of bits. 
+  - And another type of key-based algorithm is asymmetric when encryption and decryption keys are different. Public key - encryption key. Private key - decryption key.
+
+- Messages could be hidden in the images. 
+<img width="342" alt="hiddenmsg" src="https://user-images.githubusercontent.com/102544139/163627233-75bf67c1-60ac-438b-98db-3d5d9939db71.png">
+
+Source Hide Your Message Inside the Image : 5 Steps - Instructables copy /b some.jpg + msg.txt hiddenmsg.jpg
+
+- Three most common cryptographic algorithms
+  - Data Encryption Standard (DES) - symmetric algorithm
+  - RSA - public-key algorithm, used both for encryption and digital signatures.
+  - Digital Signature Algorithm (DSA) - used only for digital signatures
+
+#### Examples of public-key cryptography.
+
+  - TLS (Transport layer security) (application layer) - protocol for establishing encrypted communication between computers. Before TLS the data on the web was transmitted in plain text. SSL certificate - digital document that identifies the website using key pair. The public key allows a web browser to initiate an encrypted communication with a web server using TLS and HTTPS protocols. Private key is kept secure on the server and used to digitally sign web pages and other documents (js files, images). It also identifies info about websites. (Source: ssl.com)
+
+- IPsec (Internet layer) - a group of protocols that are used together to set up encrypted connections. For example it is used for setting up VPN. It encrypts IP packets and authenticates the source from where this packet came from. (Source: What is IPsec? | How IPsec VPNs work | Cloudflare) IPsec uses Digital Certificates. 
+
+Digital certificate - is a document that is issued by Certificate Authority. The certificate contains a general public key for a digital signature and specifies the identity of the key owner. (Source: How does the IPsec use digital certificates and digital signatures? (tutorialspoint.com)).
+
+
+
+
 
 
 
