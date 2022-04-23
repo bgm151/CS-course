@@ -241,6 +241,21 @@ Source: Secret Key Exchange (Diffie-Hellman) - Computerphile https://www.youtube
 ![4](https://user-images.githubusercontent.com/102544139/163711435-0a0a4166-2708-441f-ae60-20d95f82bacb.png)
 
 
+### H4
+#### Summary of Shavers & Bair 2016: Hiding Behind the Keyboard: The Tor Browser.
+
+- Tor browser (that was build on the basis of Firefox) anonymises users and makes tracking them if not impossible, but extremely difficult.
+- Tor browser hides users IP address.
+- Tor doesn't keep any internet history.
+- Tor nodes are publicly available and there are resources that can be used to search if this IP is or was used as a Tor node (Exonera Tor)
+- Because Tor is a portable application, users tend to hide it by changing the name of the execution file and placing it in random place on the computer. So during the investigation it's important not only to eearch fot "tor" on the computer but also tor hashes.
+- Another thing that makes Tor browser difficult to investigate is how it uses memory. After Tor browser is shut duwn, it cleans up the memory. But while Tor is running, the remnants of URLs could be retrieved, they stay in memory for couple of minutes.
+- Windows stores presence of Tor browser C:\pagefile.sys, so it can be used to investigate if Tor browser was used on this computer.Also visited websites can be retreived from it.
+- Prefetch, that speeds up the loading of the applications in Windows can be unitised to see if Tor was running.
+- 
+
+The security of Tor is in it's essense to direct the trafic throught randomly chosen relays. It also uses eliptic curve cryptography. The trafic is encrypted starting from the first relay, then the secord relay strips the firs layer of the trafic nd send it to the next relay. It contibues till the last exit node that passes unecrypted trafic to the destination. The exit node changes every 10 minutes
+
 
 
 
