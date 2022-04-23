@@ -255,6 +255,8 @@ Source: Secret Key Exchange (Diffie-Hellman) - Computerphile https://www.youtube
 - Mainly if user's anonymity gets compromised in Tor it happens because of users mistake. For example not disabling java script, downloading a file and opening it locally or clicking the button that allows tracking the loction. All these actions will lead to IP adress being disclosed.
 - There are Hidden services in Tor network. Hidden services provide email or file hosting. They are not indexed by search engines and that's why they are invisible for the Internet. Hidden services don't use exit node, so they use end-to-end encryption. Setting up hidden service is a fairly easy task. 
 
+Other networks than Tor. For example there is ZeroNet. It is decentralized peer-to-peer network. Instead of having the IP address, websited identified by public key. And the owner of the website, having a private key, can add changes there. Zero net uses Bitcoin cryptography, it's not anonimus by itself but it can route the traffic throught the Tor network. The killer feature of the ZeroNet is the possibility to browse websites even without the internet connection. 
+
 The security of Tor is in it's essense to direct the trafic throught randomly chosen relays. It also uses eliptic curve cryptography. The trafic is encrypted starting from the first relay, then the secord relay strips the firs layer of the trafic nd send it to the next relay. It contibues till the last exit node that passes unecrypted trafic to the destination. The exit node changes every 10 minutes
 
 
