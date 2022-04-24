@@ -244,16 +244,16 @@ Source: Secret Key Exchange (Diffie-Hellman) - Computerphile https://www.youtube
 ### H4
 #### Summary of Shavers & Bair 2016: Hiding Behind the Keyboard: The Tor Browser.
 
-- Tor browser (that was build on the basis of Firefox) anonymises users and makes tracking them if not impossible, but extremely difficult.
-- Tor browser hides users IP address.
+- Tor browser (that was built based on Firefox) anonymises users and makes tracking them if not impossible, but extremely difficult.
+- Tor browser hides the user's IP address.
 - Tor doesn't keep any internet history.
-- Tor nodes are publicly available and there are resources that can be used to search if this IP is or was used as a Tor node (Exonera Tor)
-- Because Tor is a portable application (it can be run from anywhere, including USB stick), users tend to hide it by changing the name of the execution file and placing it in random place on the computer. So during the investigation it's important not only to eearch fot "tor" on the computer but also tor hashes.
-- Another thing that makes Tor browser difficult to investigate is how it uses memory. After Tor browser is shut duwn, it cleans up the memory. But while Tor is running, the remnants of URLs could be retrieved, they stay in memory for couple of minutes.
-- Windows stores presence of Tor browser C:\pagefile.sys, so it can be used to investigate if Tor browser was used on this computer.Also visited websites can be retreived from it.
-- Prefetch, that speeds up the loading of the applications in Windows can be unitised to see if Tor was running.
-- Mainly if user's anonymity gets compromised in Tor it happens because of users mistake. For example not disabling java script, downloading a file and opening it locally or clicking the button that allows tracking the loction. All these actions will lead to IP adress being disclosed.
-- There are Hidden services in Tor network. Hidden services provide email or file hosting. They are not indexed by search engines and that's why they are invisible for the Internet. Hidden services don't use exit node, so they use end-to-end encryption. Setting up hidden service is a fairly easy task. 
+- Tor nodes are publicly available and some resources can be used to search if this IP is or was used as a Tor node (Exonera Tor)
+- Because Tor is a portable application (it can be run from anywhere, including a USB stick), users tend to hide it by changing the name of the execution file and placing it in a random place on the computer. So during the investigation, it's important not only to search for "tor" on the computer but also tor hashes.
+- Another thing that makes Tor browser difficult to investigate is how it uses memory. After the Tor browser is shut down, it cleans up the memory. But while Tor is running, the remnants of URLs could be retrieved, they stay in memory for a couple of minutes.
+- Windows stores the presence of Tor browser C:\pagefile.sys, so it can be used to investigate if the Tor browser was used on this computer. Also visited websites can be retrieved from it.
+- Prefetch, which speeds up the loading of the applications in Windows can be unitised to see if Tor was running.
+- Mainly if a user's anonymity gets compromised in Tor it happens because of the user's mistake. For example not disabling javascript, downloading a file and opening it locally or clicking the button that allows tracking the location. All these actions will lead to the IP address being disclosed.
+- There are Hidden services in the Tor network. Hidden services provide email or file hosting. They are not indexed by search engines and that's why they are invisible on the Internet. Hidden services don't use exit nodes, so they use end-to-end encryption. Setting up a hidden service is a fairly easy task. 
 
 #### Installing Tor
 ![tor](https://user-images.githubusercontent.com/102544139/164964920-a7bcc116-2f9a-4586-9e4e-4185814e608d.png)
@@ -272,18 +272,18 @@ Source: Secret Key Exchange (Diffie-Hellman) - Computerphile https://www.youtube
 ![forum](https://user-images.githubusercontent.com/102544139/164964991-4a22c467-941a-4529-adfd-e26cd0151436.png)
 
 #### Anonimity compromise case in Tor
-Since 2020 threat actor was placing malicious exit nodes to perform ssl stripping atack on users who were acessing cryptocurrency related sites. It was reported that in May 2020, they ran a quarter of all Tor exit relays. SSL stripping attack is the attack when user's traffic is downgraded from using HTTPS to HTTP. The primary goal of this attack was to replace bitcoin addresses.
+Since 2020 threat actors was placing malicious exit nodes to perform SSL stripping attacks on users who were accessing cryptocurrency-related sites. It was reported that in May 2020, they ran a quarter of all Tor exit relays. SSL stripping attack is the attack when a user's traffic is downgraded from using HTTPS to HTTP. The primary goal of this attack was to replace bitcoin addresses.
 
-"Bitcoin mixers are websites that allow users to send Bitcoin from one address to another by breaking the funds in small sums and transferring them through thousands of intermediary addresses before re-joining the funds at the destination address. By replacing the destination address at the HTTP traffic level, the attackers effectively hijacked the user's funds without the users or the Bitcoin mixer's knowledge." (Source: https://www.zdnet.com/article/a-mysterious-group-has-hijacked-tor-exit-nodes-to-perform-ssl-stripping-attacks/)
+"Bitcoin mixers are websites that allow users to send Bitcoin from one address to another by breaking the funds into small sums and transferring them through thousands of intermediary addresses before re-joining the funds at the destination address. By replacing the destination address at the HTTP traffic level, the attackers effectively hijacked the user's funds without the users or the Bitcoin mixer's knowledge." (Source: https://www.zdnet.com/article/a-mysterious-group-has-hijacked-tor-exit-nodes-to-perform-ssl-stripping-attacks/)
 
 #### Other networks from Tor
-Other networks than Tor. For example there is [ZeroNet](https://www.bing.com/search?q=zeronet&cvid=9585b31d9a994b79960b0aac15650866&aqs=edge.0.69i59j0l8.1776j0j1&pglt=297&FORM=ANNTA1&PC=ASTS). It is decentralized peer-to-peer network. Instead of having the IP address, websited identified by public key. And the owner of the website, having a private key, can add changes there. Zero net uses Bitcoin cryptography, it's not anonimus by itself but it can route the traffic throught the Tor network. The killer feature of the ZeroNet is the possibility to browse websites even without the internet connection. (Source: https://en.wikipedia.org/wiki/ZeroNet?msclkid=0d91920bc3a311ecb55b7af6c42d4053)
+Other networks than Tor. For example, there is [ZeroNet](https://www.bing.com/search?q=zeronet&cvid=9585b31d9a994b79960b0aac15650866&aqs=edge.0.69i59j0l8.1776j0j1&pglt=297&FORM=ANNTA1&PC=ASTS). It is a decentralized peer-to-peer network. Instead of having the IP address, the website is identified by a public key. And the owner of the website, having a private key, can add changes there. Zero net uses Bitcoin cryptography, it's not anonymous by itself but it can route the traffic through the Tor network. The killer feature of ZeroNet is the possibility to browse websites even without an internet connection. (Source: https://en.wikipedia.org/wiki/ZeroNet?msclkid=0d91920bc3a311ecb55b7af6c42d4053)
 
 #### How does anonymity work in Tor?
-The security of Tor is in it's essense to direct the trafic throught randomly chosen relays. It also uses eliptic curve cryptography. The trafic is encrypted starting from the first relay, then the secord relay strips the firs layer of the trafic nd send it to the next relay. It contibues till the last exit node that passes unecrypted trafic to the destination. The exit node changes every 10 minutes.
+The security of Tor is in its essence to direct the traffic through randomly chosen relays. It also uses elliptic curve cryptography. The traffic is encrypted starting from the first relay, and then the second relay strips the first layer of the traffic and sends it to the next relay. It continues till the last exit node that passes unencrypted traffic to the destination. The exit node changes every 10 minutes.
 
 #### Tor threat models
-Tor can be used in Reconnaissance, so the target wont be able to identify the IP address while the threat actor brows website. Or threat analyst can conceal his IP so the target won't see that there was a connection from the police or some governmental office. Also Tor can be used for phishing attacks using hidden services for sending email.
+Tor can be used in Reconnaissance, so the target won't be able to identify the IP address while the threat actor brows website. Or threat analytic can conceal his IP so the target won’t see that there was a connection from the police or some governmental office. Also, Tor can be used for phishing attacks using hidden services for sending an email.
 
 
 
