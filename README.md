@@ -308,9 +308,15 @@ Tor can be used in Reconnaissance, so the target won't be able to identify the I
 - Double spending attack is when the same coin is spent twice.
 
 #### Summary of Nakamoto, Satoshi 2008: Bitcoin: A Peer-to-Peer Electronic Cash System.
+- Satoshi Nakamoto in the paper described a system that doesn’t rely on trust and solves the double-spending problem.
+- The system allows non-reversible transactions and lowers the cost of the transaction itself.
+- Before that there were no systems that could support payments over a communication channel without a trusted party.
+- Transaction - bitcoin is a chain of digital signatures in its essence. Each owner of the coin signs a hash of the previous transaction, public key of the next coin owner and adds this signature to the end  of the coin on transfer.
+The ownership of the new block can be verified because the information of the previous block is stored in the new block.
+- Timestamp server - every block in Bitcoin has a timestamp used in hash with other information.
+- Proof-of-work - is a process of verifying the transaction. It uses the piece of data that is costly to produce, but easy to verify. Bitcoin uses the SHA-256 hashing algorithm in its proof-of-work to verify the transaction.
+- Network - nodes always consider the longest chain to be correct. The network flow looks like this - first the transaction is broadcasted to all nodes, every node tries to solve proof-of-work, when the node finds the proof-of-work it broadcasts it to all nodes. Other nodes accept the block only if all transactions were valid and weren’t spent. After accepting the block nodes use the hash of the newly created block to use it in the next block.
 
- - Transaction - bitcoin is a chain of digital signatures in its essence. Each owner of the coin signs a hash of the previous transaction, public key of the next coin owner and adds this signature to the end  of the coin on transfer.
-- The ownership of the new block can be verified because the information of the previous block is stored in the new block.
 
 #### How much is one BitCoin (BTC) worth now?
 
