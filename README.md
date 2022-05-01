@@ -285,6 +285,61 @@ The security of Tor is in its essence to direct the traffic through randomly cho
 #### Tor threat models
 Tor can be used in Reconnaissance, so the target won't be able to identify the IP address while the threat actor brows website. Or threat analytic can conceal his IP so the target won’t see that there was a connection from the police or some governmental office. Also, Tor can be used for phishing attacks using hidden services for sending an email.
 
+### H5
+#### Summary of Felten et al 2015: Bitcoin and Cryptocurrency Technologies,
+- For bitcoin hash function need to have three security properties:
+  - collision free - nobody can find the value of x and y, and yet the hash of x and hash of y are equal. Collision still exists, because the amount of possible inputs are more than possible outputs (256 possibilities). How to find a collision: 
+  - hiding - if we have an output of the hash function it’s infeasible to find the input. It doesn't work if there are only a couple of possible input values, then  it’s easy to find the input from the output.
+  - puzzle-friendly - for every possible output of the hash function, if the key is chosen randomly from the set that is widespread out. it is impossible to find the value that hits exactly the target.
+
+- Hash pointer - pointer to where the information is stored and cryptographic hash of the info (we can get the information back and verify that the information hasn’t changed)
+
+- Merkle tree is the binary tree build with the hash pointers, it’s very efficient and we can prove that the data wasn’t changed by “showing” less data than in the case of a blockchain
+
+- Hash pointers can be used in any pointer based data structure, if the data structure doesn’t have cycles.
+
+- Bitcoin uses elliptic curve signature algorithm (ECSA)
+
+- There are three steps of digital signature:
+  - First we generate public and private keys. Public keys are shared and private keys should be kept secret.
+  - Second step is a sight operation. For generating digital signatures, we need a public key and a message.
+  - Last step is a signature verification. Public key is required to verify a signature. The operation takes message and public key of the person who signed the message and verifies if the signature is valid or not.
+
+- Double spending attack is when the same coin is spent twice.
+
+#### Summary of Nakamoto, Satoshi 2008: Bitcoin: A Peer-to-Peer Electronic Cash System.
+
+ - Transaction - bitcoin is a chain of digital signatures in its essence. Each owner of the coin signs a hash of the previous transaction, public key of the next coin owner and adds this signature to the end  of the coin on transfer.
+- The ownership of the new block can be verified because the information of the previous block is stored in the new block.
+
+#### How much is one BitCoin (BTC) worth now?
+
+The price of bitcoin on 01.05.22 (10:53) Finnish time is 37 991.73 dollars for one bitcoin.
+
+If I would buy bitcoin on 8 of November in 2021 when bitcoin was all time high, I would lose lots of money in the next couple of month.
+<img width="737" alt="image2" src="https://user-images.githubusercontent.com/102544139/166154634-1da3d103-9441-4e45-9077-bf0440c361e2.png">
+
+Or if I would buy Bitcoin on 21 of September in 2020, when Bitcoin costs 10 601 dollars, I would gain a lot in the next several months.
+<img width="752" alt="image1" src="https://user-images.githubusercontent.com/102544139/166154657-5e76b77f-9050-4874-aa8f-4dd3ffbbf291.png">
+
+(Source: [#1 Bitcoin Price History Chart (2009, 2010 to 2022)](https://www.buybitcoinworldwide.com/price/))
+
+#### Is it legal to own BitCoin in Finland? 
+It is legal to own Bitcoin in Finland. Bitcoin is treated as a commodity in Finland and not as a currency. Also there are tax rules for bitcoin in Finland. When trading Bitcoin, it's treated as a capital gain. On the other hand, when used as a payment for goods and services, Bitcoin is treated as a trade. (Source: [9 Exchanges to Buy Crypto & Bitcoin in Finland (2022)](https://www.buybitcoinworldwide.com/finland/)) (Source: [Legal Status of Bitcoin | NewsBTC](https://www.newsbtc.com/is-bitcoin-legal/#:~:text=Bitcoin%20is%20treated%20as%20a%20commodity%20in%20Finland,not%20illegal%20either.%20The%20Financial%20Conduct%20Authority%20%28FCA%29))
+
+#### What's a block chain?
+Block chain is a decentralized hash pointer based data structure, where blocks are connected and the next block keeps the information about data of the previous block. So if one of the blocks in the chain is modified it will be detected straight away.
+
+#### Altcoins
+Cardano (ADA) is an altcoin developed by a group of researchers and scientists. The main advantage of Cardano is that it uses less energy to compute the next block, therefore is more sustainable than Bitcoin. (Source: [What is Cardano? | Coinbase](https://www.coinbase.com/learn/crypto-basics/what-is-cardano), https://www.cardano.com) Also Cardano has smart contracts. Cardano is built on [Ouroboros proof-of-stake consensus protocol](https://eprint.iacr.org/2016/889.pdf).
+
+“Ouroboros is a Proof of Stake (PoS)-based permissionless consensus protocol for cryptocurrencies. It is deployed as part of Cardano, which has a cryptocurrency called ADA associated with it. The basic idea in PoS is to replace the energy-expensive Proof of Work (PoW) common in first generation Blockchain protocols such as Bitcoin and the current version of Ethereum (although Ethereum has its own PoS protocols under development), with a lighter-weight mechanism where each node’s probability of being a block producer is proportional to how many coins it has.” - Bhaskar Krishnamachari. (Source: [Formalizing Proof of Stake-based Consensus: Ouroboros | by Bhaskar Krishnamachari | Medium](https://medium.com/@bhaskark2/formalizing-proof-of-stake-based-consensus-ouroboros-a5d91d360402#:~:text=Ouroboros%20is%20a%20Proof%20of%20Stake%20%28PoS%29-based%20permission,generation%20Blockchain%20protocols%20such%20as%20Bitcoin%20and%20))
+Currently the best Bitcoin altcoin is Ethereum. Etherium is not only a currency but also a programmable blockchain.
+
+
+
+
+
 
 
 
