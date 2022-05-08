@@ -402,10 +402,29 @@ Currently the best Bitcoin altcoin is Ethereum. Etherium is not only a currency 
 - Formula that shows if it’s profitable to mine:
 if mining reward > hardware + electricity cost -> Profit
 
+#### Can of worms
 
+First I run a tutorial task to understand how it works. It was ransomware, which was encrypting the data on the computer and showed the message with information on how to pay the attacker in order to decrypt the data.
 
+<img width="951" alt="image2" src="https://user-images.githubusercontent.com/102544139/167286116-9700ace2-8814-4469-89af-ae95f5513bda.png">
 
+Then I picked the task ([3979bd4374308cc1a5a91f04c080b480dc4081dd2612aa2a9d1b504f09b7367c (MD5: 3CD2595E3D20F8200D3DDF84B81932DE)- Interactive analysis - ANY.RUN]((https://app.any.run/tasks/33f9b104-2ccd-4c25-a593-8e0c6cee2338/)) from a list of public tasks and it ran on a Windows machine. I chose FormBook trojan as an example of malware. FormBook is a data stealer that is distributed as MaaS (Mobility as a Service). MaaS integrates various forms of transport services into a single mobility service accessible on demand. (Source: [What is MaaS? | MAAS-Alliance](https://maas-alliance.eu/homepage/what-is-maas/)). FormBook is a well-known commercial malware, so dubbed because it has been sold “as-a-service” on hacking forums since 2016. (Source: [Deep Analysis: New FormBook Variant Delivered in Phishing Campaign – Part I | FortiGuard Labs](https://www.fortinet.com/blog/threat-research/deep-analysis-new-formbook-variant-delivered-phishing-campaign-part-I#:~:text=FormBook%20is%20a%20well-known%20commercial%20malware%2C%20so%20dubbed,devices%20using%20control%20commands%20from%20a%20C2%20server.))
 
+<img width="956" alt="image1" src="https://user-images.githubusercontent.com/102544139/167286114-bcb04bdd-d277-4833-8a90-98dec8e19956.png">
+
+(I was trying to understand the tree of processes and how the trojan works, and I’m not sure if I got it correctly :)  But this is what I understood)
+
+On this screenshot we can see a list of processes, and look up how the malware acts step by step.
+- User downloads and executes svchost.exe, which executes Coseismic.scr. An SCR file is a generic executable script created or used by a number of possible programs (Source: [SCR File Extension - What is an .scr file and how do I open it?](https://fileinfo.com/extension/scr))
+- After receipt.exe is executed it steals credentials from Web Browsers. Also it checks for supported languages on the system. Probably because it can show a message in the correct language to the victim, so the victim can pay to retrieve the data.
+
+From this screen shot we can also see that the HTTP request was made by the receipt.exe process. And this HTTP request was checking for an IP address from http://checkip.dyndns.org/. Response body is <html><head><title>Current IP Check</title></head><body>Current IP Address: 45.134.22.115</body></html> We can see that the IP address of the attacked machine is 45.134.22.115.
+
+<img width="954" alt="image4" src="https://user-images.githubusercontent.com/102544139/167286118-3d3dcbf9-0b44-41fe-b2bd-253cce8622c8.png">
+
+On this screenshot we can see what kind of techniques and tactics this malware uses. For example we can see that the malware steals credentials from browsers and files (Credential access). Or in Execution we see that first of all the malicious file is executed by the user, but then the malicious file triggers Windows Command Shell to run the next steps (processes) of the mallwear.
+
+<img width="954" alt="image5" src="https://user-images.githubusercontent.com/102544139/167286121-c4be9d0d-d1b7-43f8-8a80-ee59e1f6d85b.png">
 
 
 
