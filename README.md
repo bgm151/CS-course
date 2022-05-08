@@ -352,7 +352,7 @@ Currently the best Bitcoin altcoin is Ethereum. Etherium is not only a currency 
   - mining - requires high capital cost, so it has high centralization.
   - updates to software - there are core developers that are controlling which software would be released.
 
--Distributed consensus
+- Distributed consensus
   - Key challenge to build a decentralized e-cash system is called distributed consensus.
   - The protocol should terminate and correct node should agree upon value.
   - And this value should be proposed by one of the current nodes.
@@ -408,7 +408,7 @@ First I run a tutorial task to understand how it works. It was ransomware, which
 
 <img width="951" alt="image2" src="https://user-images.githubusercontent.com/102544139/167286116-9700ace2-8814-4469-89af-ae95f5513bda.png">
 
-Then I picked the task ([3979bd4374308cc1a5a91f04c080b480dc4081dd2612aa2a9d1b504f09b7367c (MD5: 3CD2595E3D20F8200D3DDF84B81932DE)- Interactive analysis - ANY.RUN]((https://app.any.run/tasks/33f9b104-2ccd-4c25-a593-8e0c6cee2338/)) from a list of public tasks and it ran on a Windows machine. I chose FormBook trojan as an example of malware. FormBook is a data stealer that is distributed as MaaS (Mobility as a Service). MaaS integrates various forms of transport services into a single mobility service accessible on demand. (Source: [What is MaaS? | MAAS-Alliance](https://maas-alliance.eu/homepage/what-is-maas/)). FormBook is a well-known commercial malware, so dubbed because it has been sold “as-a-service” on hacking forums since 2016. (Source: [Deep Analysis: New FormBook Variant Delivered in Phishing Campaign – Part I | FortiGuard Labs](https://www.fortinet.com/blog/threat-research/deep-analysis-new-formbook-variant-delivered-phishing-campaign-part-I#:~:text=FormBook%20is%20a%20well-known%20commercial%20malware%2C%20so%20dubbed,devices%20using%20control%20commands%20from%20a%20C2%20server.))
+Then I picked the task ([Interactive analysis - ANY.RUN](https://app.any.run/tasks/33f9b104-2ccd-4c25-a593-8e0c6cee2338/)) from a list of public tasks and it ran on a Windows machine. I chose FormBook trojan as an example of malware. FormBook is a data stealer that is distributed as MaaS (Mobility as a Service). MaaS integrates various forms of transport services into a single mobility service accessible on demand. (Source: [What is MaaS? | MAAS-Alliance](https://maas-alliance.eu/homepage/what-is-maas/)). FormBook is a well-known commercial malware, so dubbed because it has been sold “as-a-service” on hacking forums since 2016. (Source: [Deep Analysis: New FormBook Variant Delivered in Phishing Campaign – Part I | FortiGuard Labs](https://www.fortinet.com/blog/threat-research/deep-analysis-new-formbook-variant-delivered-phishing-campaign-part-I#:~:text=FormBook%20is%20a%20well-known%20commercial%20malware%2C%20so%20dubbed,devices%20using%20control%20commands%20from%20a%20C2%20server.))
 
 <img width="956" alt="image1" src="https://user-images.githubusercontent.com/102544139/167286114-bcb04bdd-d277-4833-8a90-98dec8e19956.png">
 
