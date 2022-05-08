@@ -426,9 +426,12 @@ On this screenshot we can see what kind of techniques and tactics this malware u
 
 <img width="954" alt="image5" src="https://user-images.githubusercontent.com/102544139/167286121-c4be9d0d-d1b7-43f8-8a80-ee59e1f6d85b.png">
 
+#### Pick a StackExchange site related to the course, sort questions by score, and briefly explain one question and answer
+I found a great explanation of the Heartbleed vulnerability on the ServerFault stackexchange openssl - [How to explain Heartbleed without technical terms? - Information Security Stack Exchange](https://security.stackexchange.com/questions/55343/how-to-explain-heartbleed-without-technical-terms).
 
+Heartbeat was added to OpenSSL protocol to send “keep-alive” messages between client and a server to reduce requests amount that TLS requires to set up the connection. Heartbeat message contains a payload and the length of this payload. So when the client sends this Heartbeat message, the server saves the payload and a length in the memory. Then when the server sends a “keep-alive” response back to the client it reads those next 18 characters of memory starting from where it stored the payload and sends it back to the client (who checks that they received the right data back) and then the connection is kept alive.
+So the vulnerability occured, because server never checked for the length of the payload and does it really equal the length that was sent in this message. For example the client sends a short payload, but says that it’s maximum length (maximum value is 65535 bytes). So because the server never checks for the length of the payload itself, the server will start to send the response from where it saved the payload, and then 65635 bytes of additional information that is stored in the memory near the short payload message, such as passwords, emails and so on.
 
+And the best way of explaining it:
 
-
-
-
+<img alt="wiE3n.png" src="https://i.stack.imgur.com/wiE3n.png">
