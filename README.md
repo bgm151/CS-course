@@ -342,6 +342,65 @@ Cardano (ADA) is an altcoin developed by a group of researchers and scientists. 
 “Ouroboros is a Proof of Stake (PoS)-based permissionless consensus protocol for cryptocurrencies. It is deployed as part of Cardano, which has a cryptocurrency called ADA associated with it. The basic idea in PoS is to replace the energy-expensive Proof of Work (PoW) common in first generation Blockchain protocols such as Bitcoin and the current version of Ethereum (although Ethereum has its own PoS protocols under development), with a lighter-weight mechanism where each node’s probability of being a block producer is proportional to how many coins it has.” - Bhaskar Krishnamachari. (Source: [Formalizing Proof of Stake-based Consensus: Ouroboros | by Bhaskar Krishnamachari | Medium](https://medium.com/@bhaskark2/formalizing-proof-of-stake-based-consensus-ouroboros-a5d91d360402#:~:text=Ouroboros%20is%20a%20Proof%20of%20Stake%20%28PoS%29-based%20permission,generation%20Blockchain%20protocols%20such%20as%20Bitcoin%20and%20))
 Currently the best Bitcoin altcoin is Ethereum. Etherium is not only a currency but also a programmable blockchain.
 
+### H6
+
+#### Felten et al 2015: Bitcoin and Cryptocurrency Technologies, videos Week 2 summary
+
+- There are no systems that are purely centralized or decentralized. (Ex. email)
+- Aspects of decentralization in Bitcoin
+  - peer-to-peer network - the part of the bitcoin that is purely decentralized, anybody can run bitcoin node.
+  - mining - requires high capital cost, so it has high centralization.
+  - updates to software - there are core developers that are controlling which software would be released.
+
+-Distributed consensus
+  - Key challenge to build a decentralized e-cash system is called distributed consensus.
+  - The protocol should terminate and correct node should agree upon value.
+  - And this value should be proposed by one of the current nodes.
+
+- When somebody pays someone in the Bitcoin network, the transaction is broadcasted to all Bitcoin nodes. The payer signature includes a payee public key, and a hash - way for payer to link together receipt and the coin that she received previously.
+
+- How does it work in Bitcoin?
+  - All nodes have a sequence of blocks of transactions they’ve reached consensus on.
+  - Each node has a set of outstanding transactions that it’s heard about
+
+- Why consensus is hard?
+  - Nodes can crash or be malicious.
+  - Network is imperfect.
+	- Not all nodes are connected, faults in network and latency.
+  - No notion of global time. (because nodes are spread in the interned, nodes can’t agree on the timestamp)
+
+- Bitcoin consensus works better in practice than in theory:
+  - Because bitcoin can reward the nodes to act honestly.
+  - Embraces randomness. 
+  - The longer consensus protocol runs, the the more probability that the transaction is valid goes higher, and if it's not - goes down exponentially.
+
+- How does bitcoin work when nodes don't have identities? 
+  - Bitcoin consensus algorithms.
+  - Bitcoin nodes don’t have identity, because it’s P2P system and to avoid Sybil attack. (number of fake identities controlled by one real identity)
+  - Pseudonymity is a goal of bitcoin.
+
+- Consensus algorithm:
+  - New transaction broadcasts to all nodes.
+  - Each node collects transaction into a block.
+  - In each round a random node gets to broadcast its block.
+  - Other nodes accept the block only if all transactions in it are valid. (unspent, valid signatures)
+  - Nodes express their acceptance of the block by including its hash in the next block they create.
+
+- Double spending attack is when an attacker tries to spend for example one(same) coin two times. 
+- Double-spend probability decreases exponentially with the number  of confirmations from nodes. (most common 6 confirmations)
+- Malicious nodes can ignore the longest valid branch rule when proposing a new block.
+
+- Proof-of-work
+  - Block reward - the node that creates a block makes a special transaction, which is a coin creation transaction, where it can select an address of the recipient, where it can add its own address to pay itself.
+- Collection of the reward happens when the transaction will be confirmed by other nodes.
+- Select node in proportion of computing power.
+- Let nodes compete for right to create block.
+- Make it moderately hard to create new identities.
+
+- Attacks infeasible if majority of miners weighted by hash power follow the protocol.
+
+- Formula that shows if it’s profitable to mine:
+if mining reward > hardware + electricity cost -> Profit
 
 
 
