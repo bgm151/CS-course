@@ -435,3 +435,47 @@ So the vulnerability occured, because server never checked for the length of the
 And the best way of explaining it:
 
 <img alt="wiE3n.png" src="https://i.stack.imgur.com/wiE3n.png">
+
+### H7
+#### Bitcoin block structure
+
+Each block contains a block header as well as transaction data — two crucial sets of information integral to the network’s proper function and ability to transfer value. Each block must also contain certain specific information in order to be recognized by the network and subsequently become properly validated and appended to the blockchain.
+
+<img width="936" alt="explain-bitcoin-block" src="https://user-images.githubusercontent.com/102544139/168288875-3084a8ce-4746-47f3-ba4d-7907de372762.png">
+
+ - Height - location of the block in the blockchain.
+ - Time - timestamp of the current block
+ - Hash - the hash of this block or a reference to the block
+ - Transactions - number of transactions in the block
+ - Output - how many bitcoins are in this block, sum of all the transactions. 
+ - Fee - how much bitcoin was payed to the miner
+ - Main chain - Bitcoin’s main chain is the base blockchain layer where all transactions are processed and finalized. It basically means if the block was attached to the blockchain.
+ - Found by - the miner who solved the proof-of-work puzzle
+
+<img width="923" alt="explain-bitcoin-block-1" src="https://user-images.githubusercontent.com/102544139/168289033-01aa54cb-4706-4cbf-b33a-9f41dce734f2.png">
+
+ - Difficulty - complexity to add the block into blockchain.
+ - Bits -  The difficulty rating of the target hash, signifying the difficulty in solving the nonce.
+ - Size - size of the information in the block
+ - Version - field indicates the version number of the Bitcoin protocol being used.
+ - Nonce - contains a 32-bit number that a miner must alter in order to correctly solve the computational puzzle for the current block.
+ - Block reward - the amount rewarded to the miner for adding a block of transactions.
+ - Transaction fee  - Every Bitcoin transaction spends zero or more bitcoins to zero or more recipients. The difference between the amount being spent and the amount being received is the transaction fee (which must be zero or more).
+ - Total output - how many bitcoins are in this block, sum of all the transactions. (same as Output from previous screenshot)
+ - Self hash - hash of the current block in the blockchain
+ - Previous block - hash of the previous block in the blockchain
+ - Next block - hash of the next block in the blockchain (empty on the screenshot, because it’s the last block)
+ - Merkle root - field contains a 256-bit hash of the root of the Merkle tree of all the transactions in the current block.
+
+*References*
+[Block (Bitcoin Block) Definition (investopedia.com)](https://www.investopedia.com/terms/b/block-bitcoin-block.asp)
+[What Is a Block in the Blockchain? Block Structure. Gemini](https://www.gemini.com/cryptopedia/what-is-block-in-blockchain-bitcoin-block-size)
+[What Is Bitcoin Main Chain? - The Bitcoin Manual](https://thebitcoinmanual.com/blockchain/main-chain/)
+[Miner fees - Bitcoin Wiki](https://en.bitcoin.it/wiki/Miner_fees)
+[Structure of a Block in Blockchain - Naukri Learning](https://www.naukri.com/learning/articles/structure-of-a-block-in-blockchain/)
+
+
+
+
+
+
