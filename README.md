@@ -442,7 +442,7 @@ And the best way of explaining it:
 Each block contains a block header as well as transaction data — two crucial sets of information integral to the network’s proper function and ability to transfer value. Each block must also contain certain specific information in order to be recognized by the network and subsequently become properly validated and appended to the blockchain.
 
 
-Screenshots are taken from [Detailed Info about Block 614926 | BitcoinChain.com](https://bitcoinchain.com/block_explorer/block/0000000000000000000f83a7490243701b7d5d287b98e20792d951584347e009/)
+Screenshots are taken from [Detailed Info about Block 614926. BitcoinChain.com](https://bitcoinchain.com/block_explorer/block/0000000000000000000f83a7490243701b7d5d287b98e20792d951584347e009/)
 
 <img width="936" alt="explain-bitcoin-block" src="https://user-images.githubusercontent.com/102544139/168288875-3084a8ce-4746-47f3-ba4d-7907de372762.png">
 
