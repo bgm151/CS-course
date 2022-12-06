@@ -485,6 +485,7 @@ Screenshots are taken from [Detailed Info about Block 614926. BitcoinChain.com](
 - https://wiki.owasp.org/index.php/OWASP_favicon_database - favicon database
 - https://ui.ctsearch.entrust.com/ui/ctsearchui - certificates database
 - https://crt.sh/ - certificates database
+- https://crackstation.net/ - hashes library
 
 ### Useful tools
 - dnsrecon -t brt -d acmeitsupport.thm - bruteforce subdomain search
@@ -498,6 +499,12 @@ Screenshots are taken from [Detailed Info about Block 614926. BitcoinChain.com](
 ffuf -w valid_usernames.txt:W1,/usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.87.232/customers/login -fc 200
 ```
 
+### Terms
+- IDOR - Insecure Direct Object Reference access control vulnerability
+
+### IDOR
+
+If the Id cannot be detected using the above methods, an excellent method of IDOR detection is to create two accounts and swap the Id numbers between them. If you can view the other users' content using their Id number while still being logged in with a different account (or not logged in at all), you've found a valid IDOR vulnerability.
 
 
 
